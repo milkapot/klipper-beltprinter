@@ -1,0 +1,34 @@
+Copy the above file to /home/mks/klipper/klippy/extras
+
+bed_mesh.py
+probe_y.py
+manual_probe.py 
+
+Add to config file
+
+[bed_mesh]
+speed: 100
+horizontal_move_y: 5
+mesh_min: 42,10
+mesh_max: 240,12
+probe_count: 5,2
+mesh_pps: 2,2
+
+[probe_y]
+pin:~!PB14 # define the pin of probe remove
+x_offset: 40
+#y_offset: 0
+#z_offset: 0
+speed: 5.0
+
+[manual_probe]
+
+[stepper_y]
+xxxxx
+xxxxx
+endstop_pin: probe_y:y_virtual_endstop  # use virtual endstop pin from probe_y
+#endstop_pin:!PA15
+position_min: -10
+#position_endstop:0 #remove position endstop
+xxxx
+xxxx
